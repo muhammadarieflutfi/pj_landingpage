@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bumbu Dapur Pola - Kelapa Gongseng Khas Kualitas Premium</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                orange: "#F2542D",
+                darkred: "#7C1C1D",
+                amber: "#D97706",
+                cream: "#FFFBEB",
+                teal: "#0D9488",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-bg {
+        /* Background aerial coast image overlay */
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(13, 27, 42, 0.55),
+            rgba(124, 28, 29, 0.88)
+          ),
+          url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-amber-50/30 text-gray-800 flex flex-col min-h-screen"
+  >
+    <!-- HEADER / NAVIGATION -->
+    <header
+      class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-amber-100"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex justify-between items-center"
+      >
+        <!-- Brand Logo menggunakan gambar asli -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="h-12 sm:h-14 w-auto flex items-center justify-center py-1"
+          >
+            <img
+              src="logo.jpeg"
+              alt="Bumbu Dapur Pola Logo"
+              class="h-full w-auto object-contain group-hover:scale-8000 transition-transform duration-300"
+            />
+          </div>
+        </a>
+
+        <!-- Nav Links & Quick Order -->
+        <nav
+          class="hidden md:flex items-center gap-6 font-medium text-sm text-gray-700"
+        >
+          <a href="#tentang" class="hover:text-brand-orange transition-colors"
+            >Tentang Kami</a
+          >
+          <a href="#apa-itu" class="hover:text-brand-orange transition-colors"
+            >Apa itu Kelapa Gongseng?</a
+          >
+          <a href="#produk" class="hover:text-brand-orange transition-colors"
+            >Produk</a
+          >
+          <a href="#galeri" class="hover:text-brand-orange transition-colors"
+            >Galeri Produksi</a
+          >
+        </nav>
+
+        <button
+          onclick="orderWA('General')"
+          class="bg-gradient-to-r from-brand-orange to-red-600 hover:from-red-600 hover:to-brand-orange text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2 text-sm"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Pesan Sekarang</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative hero-bg text-white py-16 lg:py-28 px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <!-- Logo Badge di Hero -->
+        <div
+          class="inline-block bg-white/95 backdrop-blur-md p-3 px-6 rounded-2xl shadow-xl border border-white/40 mb-2"
+        >
+          <img
+            src="https://drive.google.com/file/d/1MWxb6LBW3ZS9UEOkCbMDzmAz6BWEc52_/view?usp=sharing"
+            alt="Logo Bumbu Dapur Pola"
+            class="h-16 sm:h-20 mx-auto object-contain"
+          />
+        </div>
+
+        <br />
+        <span
+          class="inline-block bg-brand-orange/90 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full tracking-wide shadow-sm border border-white/20"
+        >
+          🌿 Rahasia Masakan Lezat & Aromatic Tradisional
+        </span>
+        <h1
+          class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold leading-tight drop-shadow-md"
+        >
+          Keharuman & Kelezatan Autentik <br />
+          <span class="text-amber-300">Kelapa Gongseng Bumbu Dapur Pola</span>
+        </h1>
+        <p
+          class="text-base sm:text-lg text-amber-50 max-w-2xl mx-auto font-light leading-relaxed drop-shadow"
+        >
+          Dibuat dari kelapa pilihan yang disangrai sempurna hingga menghasilkan
+          minyak alami dan aroma gurih yang kaya. Siap melengkapi hidangan
+          istimewa keluarga Anda.
+        </p>
+        <div
+          class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4"
+        >
+          <button
+            onclick="orderWA('General')"
+            class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-0.5"
+          >
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span>Pesan Langsung via WA</span>
+          </button>
+          <a
+            href="#produk"
+            class="w-full sm:w-auto bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/40 px-8 py-4 rounded-full font-semibold text-lg transition-all text-center"
+          >
+            Lihat Varian Produk
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow">
+      <!-- SECTION: TENTANG KAMI & APA ITU KELAPA GONGSENG -->
+      <section id="tentang" class="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Deskripsi Usaha -->
+          <div class="space-y-4">
+            <div
+              class="inline-flex items-center gap-2 text-brand-orange font-semibold text-sm uppercase tracking-wider"
+            >
+              <i class="fa-solid fa-store"></i>
+              <span>Tentang Usaha Kami</span>
+            </div>
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred"
+            >
+              Bumbu Dapur Pola
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              <strong>Bumbu Dapur Pola</strong> adalah UMKM kuliner yang
+              berkomitmen menghadirkan bumbu tradisional berkualitas tinggi,
+              hygienis, dan kaya cita rasa. Kami memproduksi **Kelapa Gongseng**
+              (U Neulheu) pilihan tanpa bahan pengawet sintetik.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Diproses secara higienis dari kelapa segar pilihan khas pesisir
+              pantai yang gurih, disangrai perlahan hingga mencapai tingkat
+              kematangan dan aroma rempah terbaik.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-4">
+              <div
+                class="bg-amber-100/60 p-4 rounded-xl border border-amber-200"
+              >
+                <i class="fa-solid fa-leaf text-brand-orange text-2xl mb-1"></i>
+                <h4 class="font-bold text-gray-800">100% Alami</h4>
+                <p class="text-xs text-gray-600">
+                  Tanpa bahan pengawet & buatan
+                </p>
+              </div>
+              <div
+                class="bg-amber-100/60 p-4 rounded-xl border border-amber-200"
+              >
+                <i
+                  class="fa-solid fa-fire-burner text-brand-orange text-2xl mb-1"
+                ></i>
+                <h4 class="font-bold text-gray-800">Sangrai Tradisional</h4>
+                <p class="text-xs text-gray-600">Aroma harum dan tahan lama</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Penjelasan Kelapa Gongseng -->
+          <div
+            id="apa-itu"
+            class="bg-white p-8 rounded-2xl shadow-lg border border-amber-100 relative overflow-hidden"
+          >
+            <div
+              class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-100 rounded-full blur-2xl -z-0"
+            ></div>
+            <div class="relative z-10 space-y-4">
+              <div
+                class="inline-flex items-center gap-2 text-brand-orange font-semibold text-sm uppercase tracking-wider"
+              >
+                <i class="fa-solid fa-mortar-pestle"></i>
+                <span>Eksplorasi Rasa</span>
+              </div>
+              <h3
+                class="font-serif text-2xl sm:text-3xl font-bold text-gray-900"
+              >
+                Apa Itu Kelapa Gongseng?
+              </h3>
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                <strong>Kelapa Gongseng</strong> (juga dikenal sebagai
+                <em>U Neulheu</em> dalam kuliner Aceh / kelapa sangrai halus)
+                adalah racikan parutan kelapa murni yang disangrai secara
+                konstan dalam waktu lama tanpa minyak hingga berwarna cokelat
+                keemasan matang, lalu digiling halus sampai mengeluarkan minyak
+                bumbu alaminya.
+              </p>
+              <div
+                class="bg-amber-50 p-4 rounded-xl border-l-4 border-brand-orange"
+              >
+                <h4 class="font-semibold text-brand-darkred text-sm mb-1">
+                  Kegunaan Dalam Masakan:
+                </h4>
+                <ul
+                  class="text-xs sm:text-sm text-gray-700 space-y-1 list-disc list-inside"
+                >
+                  <li>Bumbu utama Rendang & Gulai agar lebih pekat & gurih</li>
+                  <li>Campuran Masakan Kari, Ayam Tangkap, dan Sie Reuboh</li>
+                  <li>Penyedap alami olahan daging, ikan, dan aneka tumisan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: PRODUK VARIAN -->
+      <section id="produk" class="py-16 bg-white border-y border-amber-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+              class="text-brand-orange font-semibold text-sm uppercase tracking-wider"
+              >Pilihan Terbaik</span
+            >
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred mt-1"
+            >
+              Varian Kelapa Gongseng
+            </h2>
+            <p class="text-gray-600 mt-2 text-sm sm:text-base">
+              Tersedia dalam dua kemasan praktis sesuai kebutuhan dapur dan
+              usaha Anda.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Varian 500 Gram -->
+            <div
+              class="bg-amber-50/40 rounded-2xl p-6 border-2 border-amber-200/80 hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group"
+            >
+              <div>
+                <!-- Placeholder Foto Produk -->
+                <div
+                  class="relative w-full h-64 bg-gray-200 rounded-xl overflow-hidden mb-6 flex items-center justify-center border border-amber-200 group-hover:scale-[1.02] transition-transform duration-300"
+                >
+                  <img
+                    src="https://placehold.co/600x400/7C1C1D/FFFBEB?text=Foto+Kelapa+Gongseng+500g"
+                    alt="Varian 500 Gram"
+                    class="w-full h-full object-cover"
+                  />
+                  <span
+                    class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow"
+                  >
+                    Kemasan Sedang
+                  </span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Kelapa Gongseng - Varian 500 gr
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Sangat cocok untuk kebutuhan memasak sehari-hari di rumah
+                  tangga, stok dapur keluarga, atau pesta kecil.
+                </p>
+                <ul class="text-xs text-gray-600 space-y-2 mb-6">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Berat bersih 500 Gram
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Kemasan rapat & terjamin higienis
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Daya simpan lama
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="flex items-baseline justify-between mb-4">
+                  <span class="text-xs text-gray-500">Harga Spesial</span>
+                  <span class="text-2xl font-bold text-brand-darkred"
+                    >Hubungi Kami</span
+                  >
+                </div>
+                <button
+                  onclick="orderWA('500 Gram')"
+                  class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow transition-all flex items-center justify-center gap-2"
+                >
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                  <span>Pesan Varian 500gr</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Varian 1 KG -->
+            <div
+              class="bg-amber-50/40 rounded-2xl p-6 border-2 border-amber-200/80 hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 bg-brand-darkred text-white text-[10px] font-bold px-8 py-1 rotate-45 translate-x-6 translate-y-3 shadow"
+              >
+                HEMAT
+              </div>
+              <div>
+                <!-- Placeholder Foto Produk -->
+                <div
+                  class="relative w-full h-64 bg-gray-200 rounded-xl overflow-hidden mb-6 flex items-center justify-center border border-amber-200 group-hover:scale-[1.02] transition-transform duration-300"
+                >
+                  <img
+                    src="https://placehold.co/600x400/7C1C1D/FFFBEB?text=Foto+Kelapa+Gongseng+1+KG"
+                    alt="Varian 1 KG"
+                    class="w-full h-full object-cover"
+                  />
+                  <span
+                    class="absolute top-3 right-3 bg-brand-darkred text-white text-xs font-bold px-3 py-1 rounded-full shadow"
+                  >
+                    Kemasan Hemat 1 KG
+                  </span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Kelapa Gongseng - Varian 1 kg
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Pilihan ekonomis tepat untuk usaha katering, rumah makan,
+                  restoran, atau acara hajad besar.
+                </p>
+                <ul class="text-xs text-gray-600 space-y-2 mb-6">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Berat bersih 1.000 Gram (1 kg)
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Harga lebih hemat & ekonomis
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    Kualitas terjamin seragam
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="flex items-baseline justify-between mb-4">
+                  <span class="text-xs text-gray-500">Harga Spesial</span>
+                  <span class="text-2xl font-bold text-brand-darkred"
+                    >Hubungi Kami</span
+                  >
+                </div>
+                <button
+                  onclick="orderWA('1 KG')"
+                  class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow transition-all flex items-center justify-center gap-2"
+                >
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                  <span>Pesan Varian 1 kg</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: GALERI FOTO & VIDEO KEGIATAN PRODUSKI -->
+      <section id="galeri" class="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span
+            class="text-brand-orange font-semibold text-sm uppercase tracking-wider"
+            >Transparansi Kualitas</span
+          >
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred mt-1"
+          >
+            Dokumentasi & Proses Pembuatan
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm sm:text-base">
+            Kami menjaga kebersihan dan mutu terbaik di setiap tahap
+            penyangraian.
+          </p>
+        </div>
+
+        <!-- Video Section Placeholder -->
+        <div class="mb-12">
+          <div
+            class="max-w-4xl mx-auto bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-video relative flex items-center justify-center"
+          >
+            <!-- Placeholder untuk Video Kegiatan -->
+            <div class="text-center p-6 text-white">
+              <div
+                class="w-16 h-16 sm:w-20 sm:h-20 bg-brand-orange/90 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition-transform shadow-lg"
+              >
+                <i class="fa-solid fa-play text-2xl text-white ml-1"></i>
+              </div>
+              <h4 class="text-lg font-bold">
+                Video Kegiatan Pembuatan Kelapa Gongseng
+              </h4>
+              <p class="text-xs text-gray-300 mt-1">
+                Area tempat menaruh video proses pembuatan / gongseng kelapa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto Galeri Placeholders -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Foto 1 -->
+          <div
+            class="bg-gray-200 rounded-xl overflow-hidden aspect-square border border-amber-200 group relative"
+          >
+            <img
+              src="https://placehold.co/500x500/F2542D/FFFBEB?text=Foto+Kelapa+Pilihan"
+              alt="Pemilihan Kelapa"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3"
+            >
+              <span class="text-white text-xs font-semibold"
+                >Pemilihan Kelapa Segar</span
+              >
+            </div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div
+            class="bg-gray-200 rounded-xl overflow-hidden aspect-square border border-amber-200 group relative"
+          >
+            <img
+              src="https://placehold.co/500x500/7C1C1D/FFFBEB?text=Proses+Sangrai"
+              alt="Proses Sangrai"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3"
+            >
+              <span class="text-white text-xs font-semibold"
+                >Proses Penyangraian Perlahan</span
+              >
+            </div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div
+            class="bg-gray-200 rounded-xl overflow-hidden aspect-square border border-amber-200 group relative"
+          >
+            <img
+              src="https://placehold.co/500x500/D97706/FFFBEB?text=Penggilingan+Halus"
+              alt="Penggilingan"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3"
+            >
+              <span class="text-white text-xs font-semibold"
+                >Penggilingan Bumbu Halus</span
+              >
+            </div>
+          </div>
+
+          <!-- Foto 4 -->
+          <div
+            class="bg-gray-200 rounded-xl overflow-hidden aspect-square border border-amber-200 group relative"
+          >
+            <img
+              src="https://placehold.co/500x500/0D9488/FFFBEB?text=Pengemasan+Rapi"
+              alt="Pengemasan"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3"
+            >
+              <span class="text-white text-xs font-semibold"
+                >Pengemasan Higienis</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: CTA BANNER -->
+      <section
+        class="bg-gradient-to-r from-brand-darkred to-red-900 text-white py-14 px-4 sm:px-6 relative overflow-hidden"
+      >
+        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+            Siap Mengangkat Cita Rasa Masakan Anda?
+          </h2>
+          <p
+            class="text-amber-100 text-sm sm:text-base max-w-xl mx-auto font-light"
+          >
+            Dapatkan Kelapa Gongseng asli dari Bumbu Dapur Pola sekarang.
+            Pengiriman siap dikirim ke alamat Anda!
+          </p>
+          <button
+            onclick="orderWA('General')"
+            class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-2xl transition-all inline-flex items-center gap-3 text-lg"
+          >
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span>Hubungi WA Kami Sekarang</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-gray-900 text-gray-400 py-10 px-4 sm:px-6 border-t border-gray-800"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left"
+      >
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <div
+            class="bg-white p-2 rounded-xl h-14 w-auto flex items-center justify-center"
+          >
+            <img
+              src="https://drive.google.com/file/d/1MWxb6LBW3ZS9UEOkCbMDzmAz6BWEc52_/view?usp=sharing"
+              alt="Bumbu Dapur Pola"
+              class="h-full w-auto object-contain"
+            />
+          </div>
+          <div>
+            <h5 class="text-white font-bold text-lg">BUMBU DAPUR POLA</h5>
+            <p class="text-xs text-gray-400">
+              Produsen Kelapa Gongseng Premium & Bumbu Tradisional Khas
+            </p>
+          </div>
+        </div>
+        <div class="text-xs">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Bumbu Dapur Pola. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <button
+        onclick="orderWA('General')"
+        class="bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center relative group"
+        aria-label="Chat via WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span
+          class="absolute right-full mr-3 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md"
+        >
+          Pesan via WhatsApp
+        </span>
+      </button>
+    </div>
+
+    <!-- JAVASCRIPT UNTUK INTEGRASI WHATSAPP -->
+    <script>
+      // MASUKKAN NOMOR WHATSAPP ANDA DI SINI (Ganti 628xxxxxxxxxx)
+      const NOMOR_WA = "6285135360790";
+
+      function orderWA(variant) {
+        let message = "";
+
+        if (variant === "500 Gram") {
+          message =
+            "Halo Bumbu Dapur Pola, saya ingin memesan Kelapa Gongseng Varian 500 Gram. Bagaimana cara pemesanannya?";
+        } else if (variant === "1 KG") {
+          message =
+            "Halo Bumbu Dapur Pola, saya ingin memesan Kelapa Gongseng Varian 1 KG. Mohon info harga dan ongkirnya.";
+        } else {
+          message =
+            "Halo Bumbu Dapur Pola, saya berminat untuk membeli produk Kelapa Gongseng. Boleh minta informasi lebih lanjut?";
+        }
+
+        // Encode pesan untuk URL WhatsApp
+        const encodedMessage = encodeURIComponent(message);
+        const waUrl = `https://wa.me/${NOMOR_WA}?text=${encodedMessage}`;
+
+        // Buka tautan WhatsApp di tab baru
+        window.open(waUrl, "_blank");
+      }
+    </script>
+  </body>
+</html>
